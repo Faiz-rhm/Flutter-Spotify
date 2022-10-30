@@ -1,4 +1,6 @@
-# spotify
+# Spotify UI
+
+Coming Soon!
 
 A new Flutter project.
 
