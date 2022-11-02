@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/view/home_page.dart';
+import 'package:spotify/view/get_started.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const GetStarted(),
     );
   }
 }
