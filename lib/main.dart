@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/view/get_started.dart';
+import 'package:spotify/view/get_started_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Spotify',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: const GetStarted(),
+      home: const GetStartedPage(),
     );
   }
 }
