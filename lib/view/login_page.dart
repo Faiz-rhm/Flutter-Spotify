@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
                         height: height / 1.9,
                         margin: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -103,7 +103,7 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 8,),
+                            const SizedBox(height: 22,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
