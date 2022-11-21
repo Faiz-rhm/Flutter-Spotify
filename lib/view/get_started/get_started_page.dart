@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
-import 'package:spotify/view/login_page.dart';
+import 'package:spotify/view/login/login_page.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});

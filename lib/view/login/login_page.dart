@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
+import 'package:spotify/view/tab/tap.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -46,7 +47,7 @@ class LoginPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
                         height: height / 1.9,
                         margin: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -77,10 +78,10 @@ class LoginPage extends StatelessWidget {
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(31)),
                               height: 40,
                               color: ColorConstants.primaryColor,
-                              onPressed: () {},
+                              onPressed: () => Navigator.push(context , MaterialPageRoute(builder: (context) => const Tabs())),
                               child: const Text('LOG IN', style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w700),) ,
                             ),
-                            const SizedBox(height: 16,),
+                            const SizedBox(height: 10,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -103,7 +104,7 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 22,),
+                            const SizedBox(height: 16,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -116,7 +117,7 @@ class LoginPage extends StatelessWidget {
                                   child: Image.asset('assets/images/facebook.png')),
                               ],
                             ),
-                            const SizedBox(height: 26,),
+                            const SizedBox(height: 16,),
                             Text('Forget password?',
                               style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ColorConstants.starterWhite),
                               textAlign: TextAlign.center,),
@@ -145,6 +146,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class Input extends StatelessWidget {
   Input({
     Key? key, required this.hint, required this.icon,

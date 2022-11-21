@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class TopHits extends StatefulWidget {
+  const TopHits({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<TopHits> createState() => _TopHitsState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TopHitsState extends State<TopHits> {
 
   final List<Map<String, dynamic>> _list = [
     {
