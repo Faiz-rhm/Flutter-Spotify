@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
 import 'package:spotify/view/tab/home/home_page.dart';
+import 'package:spotify/view/tab/more/more_page.dart';
 import 'package:spotify/view/tab/search/search_page.dart';
 
 class Tabs extends StatefulWidget {
@@ -16,7 +17,7 @@ class _TabsState extends State<Tabs> {
   final List _screen = [
     const HomePage(),
     const SearchPage(),
-    const HomePage(),
+    const MorePage(),
   ];
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
+import 'package:spotify/view/data/data.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,22 +49,24 @@ class Artist extends StatelessWidget {
       height: 140,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 10,
+        itemCount: artists.length,
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, int index) {
-        return Container(
-          height: 140,
-          width: 140,
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(100),
-            image: const DecorationImage(
-              image: AssetImage('assets/images/artist1.png')
-            )
-          ),
-        );
+          final artist = artists[index];
+
+          return Container(
+            height: 140,
+            width: 140,
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.circular(100),
+              image: DecorationImage(
+                image: AssetImage(artist)
+              )
+            ),
+          );
       }),
     );
   }
@@ -80,67 +83,69 @@ class TopMusic extends StatelessWidget {
       height: 230,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 10,
+        itemCount: topMixes.length,
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, int index) {
-        return SizedBox(
-          width: 180,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/music1.png'),
-                      fit: BoxFit.cover
+          final topMix = topMixes[index];
+
+          return SizedBox(
+            width: 180,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                        image: AssetImage(topMix['image']),
+                        fit: BoxFit.cover
+                      )
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 7,
+                          height: 24,
+                          decoration: const BoxDecoration(
+                            color: Colors.red
+                          ),
+                        ),
+                        const SizedBox(height: 12,),
+                        Container(
+                          height: 8,
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(15),
+                              bottomRight: Radius.circular(15),
+                            )
+                          ),
+                        ),
+                      ],
                     )
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 7,
-                        height: 24,
-                        decoration: const BoxDecoration(
-                          color: Colors.red
-                        ),
-                      ),
-                      const SizedBox(height: 12,),
-                      Container(
-                        height: 8,
-                        decoration: const BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(15),
-                            bottomRight: Radius.circular(15),
-                          )
-                        ),
-                      ),
-                    ],
-                  )
-                ),
-                const SizedBox(height: 8,),
-                Text('Hip Hop Mix', style: TextStyle(
-                  color: ColorConstants.starterWhite,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                )),
-                const SizedBox(height: 8,),
-                Text('Juice Wrld, Drake, Kendrick lamar and more... ', style: TextStyle(
-                  color: ColorConstants.starterWhite,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w400,
-                ))
-              ],
+                  const SizedBox(height: 8,),
+                  Text(topMix['title'], style: TextStyle(
+                    color: ColorConstants.starterWhite,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  )),
+                  const SizedBox(height: 8,),
+                  Text(topMix['description'], style: TextStyle(
+                    color: ColorConstants.starterWhite,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w400,
+                  ))
+                ],
+              ),
             ),
-          ),
-        );
+          );
       }),
     );
   }
@@ -174,23 +179,28 @@ class WeeklyMusicList extends StatelessWidget {
       height: 160,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 10,
+        itemCount: slider.length,
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, int index) {
+          final slid = slider[index];
         return Column(
           children: [
             Container(
               height: 125,
-              width: 230,
+              width: 240,
               margin: const EdgeInsets.symmetric(horizontal: 8),
               decoration: BoxDecoration(
                 color: Colors.red,
-                borderRadius: BorderRadius.circular(15)
+                borderRadius: BorderRadius.circular(15),
+                image:  DecorationImage(
+                  image: AssetImage(slid['image']),
+                  fit: BoxFit.cover,
+                )
               ),
             ),
             const SizedBox(height: 8,),
-            Text('30 Fresh music for you every week', style: TextStyle(
+            Text(slid['title'], style: TextStyle(
               color: ColorConstants.starterWhite,
               fontSize: 11,
               fontWeight: FontWeight.w400,
