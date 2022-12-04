@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
-import 'package:spotify/view/data/data.dart';
+import 'package:spotify/data/data.dart';
 
 class PodCast extends StatelessWidget {
   const PodCast({

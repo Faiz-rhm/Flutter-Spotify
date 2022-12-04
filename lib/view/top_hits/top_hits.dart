@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/data/data.dart';
 
 class TopHits extends StatefulWidget {
   const TopHits({super.key});
@@ -9,79 +10,26 @@ class TopHits extends StatefulWidget {
 
 class _TopHitsState extends State<TopHits> {
 
-  final List<Map<String, dynamic>> _list = [
-    {
-      'image': 'assets/images/image1.png',
-      'title': 'stay',
-      'description': 'The Kid LAROI,Justin Bieber',
-      'favorite': true,
-    },
-    {
-      'image': 'assets/images/image2.png',
-      'title': 'Wishing Well',
-      'description': 'Juice WLRD',
-      'favorite': true,
-    },
-    {
-      'image': 'assets/images/image3.png',
-      'title': 'Unstable',
-      'description': 'Justin Bieber,The Kid LAROI',
-      'favorite': false,
-    },
-    {
-      'image': 'assets/images/image4.png',
-      'title': 'stay',
-      'description': 'The Kid LAROI,Justin Bieber',
-      'favorite': false,
-    },
-    {
-      'image': 'assets/images/image1.png',
-      'title': 'stay',
-      'description': 'The Kid LAROI,Justin Bieber',
-      'favorite': true,
-    },
-    {
-      'image': 'assets/images/image2.png',
-      'title': 'Wishing Well',
-      'description': 'Juice WLRD',
-      'favorite': true,
-    },
-    {
-      'image': 'assets/images/image3.png',
-      'title': 'Unstable',
-      'description': 'Justin Bieber,The Kid LAROI',
-      'favorite': false,
-    },
-    {
-      'image': 'assets/images/image4.png',
-      'title': 'stay',
-      'description': 'The Kid LAROI,Justin Bieber',
-      'favorite': false,
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white,),
+          ),
           stretch: false,
           snap: true,
           floating: true,
-          surfaceTintColor: const Color.fromRGBO(0, 0, 0, 1),
+          surfaceTintColor: Colors.black,
           backgroundColor: Colors.black,
           expandedHeight: 378,
           elevation: 1,
           pinned: true,
           titleSpacing: 16,
-          centerTitle: false,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white,),
-            ),
-          ),
+          centerTitle: true,
+          // title: const Text('Top Hit'),
           actions: const [
             Icon(
               Icons.favorite_outline,
@@ -100,7 +48,7 @@ class _TopHitsState extends State<TopHits> {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 32),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/image3.png'),
+                  image: AssetImage('assets/images/topHit.png'),
                   fit: BoxFit.none,
                 )
               ),
@@ -138,7 +86,6 @@ class _TopHitsState extends State<TopHits> {
                   borderRadius: BorderRadius.circular(50)
                 ),
                 child: const Icon(Icons.play_arrow, size: 35,),
-
               ),
               const Padding(
                 padding: EdgeInsets.only(top:16, left: 16, right: 16,),
@@ -153,9 +100,9 @@ class _TopHitsState extends State<TopHits> {
                 },
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
-                itemCount: _list.length,
+                itemCount: topHit.length,
                 itemBuilder: (BuildContext context, int index) {
-                  final item = _list[index];
+                  final item = topHit[index];
 
                   return Card(
                     color: Colors.black,

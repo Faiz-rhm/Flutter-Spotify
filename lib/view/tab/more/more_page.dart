@@ -50,11 +50,6 @@ class MorePage extends StatelessWidget {
               title: 'Followed Podcast',
               icon: Icons.mic
             ),
-            // const SizedBox(height: 13,),
-            // const PodCast(),
-            // const SizedBox(height: 12,),
-            // const CustomTitle(title: 'Browse all'),
-            // const SizedBox(height: 13,),
           ],
         ),
       ),

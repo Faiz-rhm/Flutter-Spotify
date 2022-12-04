@@ -99,8 +99,29 @@ final List<Map<String, dynamic>> playList = [
   {
     'image_1': 'assets/images/playList13.png',
     'image_2': 'assets/images/playList14.png',
-    'image_3': 'assets/images/playList15.png',
+    'image_3': 'assets/images/playList3.png',
     'image_4': 'assets/images/playList16.png',
     'title': 'Playlist #4'
   },
 ];
+
+final List<Map<String, dynamic>> topHit = [
+    {
+      'image': 'assets/images/image1.png',
+      'title': 'stay',
+      'description': 'The Kid LAROI,Justin Bieber',
+      'favorite': true,
+    },
+    {
+      'image': 'assets/images/wishingWall.png',
+      'title': 'Wishing Well',
+      'description': 'Juice WLRD',
+      'favorite': true,
+    },
+    {
+      'image': 'assets/images/jack.png',
+      'title': 'Unstable',
+      'description': 'Justin Bieber,The Kid LAROI',
+      'favorite': false,
+    },
+  ];
