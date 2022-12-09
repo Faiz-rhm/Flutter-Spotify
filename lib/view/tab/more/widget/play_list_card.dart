@@ -9,47 +9,44 @@ class PlayListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 410,
-      child: GridView.builder(
-        shrinkWrap: false,
-        itemCount: playList.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-        ),
-        itemBuilder: (context, int index) {
-          final playL = playList[index];
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const BouncingScrollPhysics(),
+      itemCount: playList.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+      ),
+      itemBuilder: (context, int index) {
+        final play = playList[index];
 
-          return Container(
-            decoration: BoxDecoration(
-              color: ColorConstants.cardBackGroundColor,
-              borderRadius: BorderRadius.circular(10)
-            ),
-            padding: const EdgeInsets.only(right: 15, left: 15, top: 15, bottom: 0),
-            margin: const EdgeInsets.all(4),
-            // width: 155,
-            height: 170,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Wrap(
-                  children: [
-                    PlayListImage(image: playL['image_1']),
-                    PlayListImage(image: playL['image_2']),
-                    PlayListImage(image: playL['image_3']),
-                    PlayListImage(image: playL['image_4']),
-                  ],
-                ),
-                const SizedBox(height: 12,),
-                Text(playL['title'], style: TextStyle(
-                  color: ColorConstants.starterWhite,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                )),
-              ],
-            ),
-          );
-      }),
+        return Container(
+          decoration: BoxDecoration(
+            color: ColorConstants.cardBackGroundColor,
+            borderRadius: BorderRadius.circular(10)
+          ),
+          padding: const EdgeInsets.only(top: 10,),
+          margin: const EdgeInsets.all(4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Wrap(
+                children: [
+                  PlayListImage(image: play['image_1']),
+                  PlayListImage(image: play['image_2']),
+                  PlayListImage(image: play['image_3']),
+                  PlayListImage(image: play['image_4']),
+                ],
+              ),
+              const SizedBox(height: 10,),
+              Text(play['title'], style: TextStyle(
+                color: ColorConstants.starterWhite,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              )),
+            ],
+          ),
+        );
+      },
     );
   }
 }

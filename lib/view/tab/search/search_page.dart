@@ -23,10 +23,7 @@ class SearchPage extends StatelessWidget {
               const SizedBox(height: 54,),
               const WelcomeTitle(title: 'Search'),
               const SizedBox(height: 32,),
-              const SizedBox(
-                height: 43,
-                child: SearchInput(),
-              ),
+              const SearchInput(),
               const SizedBox(height: 13,),
               Wrap(
                 spacing: 8,

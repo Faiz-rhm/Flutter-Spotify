@@ -16,7 +16,7 @@ class BrowseCard extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width / 2.22,
+      width: size.width / 2.25,
       height: 90,
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 20),
       decoration: BoxDecoration(

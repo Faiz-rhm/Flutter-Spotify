@@ -21,7 +21,7 @@ class SearchInput extends StatelessWidget {
           color: ColorConstants.inputHintColor,
           fontSize: 11
         ),
-        prefixIcon: const Icon(Icons.search),
+        prefixIcon: Icon(Icons.search, color: !FocusScope.of(context).isFirstFocus ? Colors.white : ColorConstants.primaryColor),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(
