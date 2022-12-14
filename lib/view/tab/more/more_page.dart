@@ -10,7 +10,7 @@ class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
+      child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class MorePage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const CustomTitle(title: 'Your Activities'),
-            const SizedBox(height: 6,),
+            const SizedBox(height: 16,),
             const ActivityCard(
               title: 'Liked Songs',
               icon: Icons.favorite
