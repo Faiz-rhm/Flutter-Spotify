@@ -8,8 +8,7 @@ I am gonna share Spotify welcome and login #ui using #flutter that runs both And
 | Welcome Screen  | Login Screen |
 | ------------- | ------------- |
 | ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-10 at 19 55 35](https://user-images.githubusercontent.com/14290499/201520387-8715ee0e-f689-44fe-ac4b-cae6505f0dda.png)  | ![Simulator Screen Shot - iPhone 14 Pro Max - 2022-11-10 at 21 38 59](https://user-images.githubusercontent.com/14290499/201520398-edf21842-e948-44a5-a8b7-02b15e3ea0f7.png)  |
-| Welcome Screen  | Login Screen |
-| ------------- | ------------- |
+| Home Screen | Search Screen |
 | ![Simulator Screen Shot - iPhone 14 - 2023-01-07 at 10 04 20](https://user-images.githubusercontent.com/14290499/211138790-b4ca340d-17c0-43d4-bb22-816af8a9b165.png) |![Simulator Screen Shot - iPhone 14 - 2023-01-07 at 10 04 36](https://user-images.githubusercontent.com/14290499/211138794-b5c1f0d5-cdfa-4bb8-b8aa-8c3344b4ed74.png)
  
 
