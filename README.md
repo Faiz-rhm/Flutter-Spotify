@@ -1,6 +1,6 @@
 # Flutter-Spotify
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[Watch it on Youtube](https://www.youtube.com/channel/UCM1OzZsZ5FQIg01vdKGAw7g)
 
 Spotify Redesign.
 
