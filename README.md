@@ -2,7 +2,7 @@
 
 # [Watch it on Youtube](https://www.youtube.com/channel/UCM1OzZsZ5FQIg01vdKGAw7g)
 
-Spotify Redesign.
+Spotify Ui Design
 
 In this repository contains Redesinged Spotify App using Flutter.
 
