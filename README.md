@@ -1,6 +1,10 @@
 # Flutter-Spotify
 
-I am gonna share Spotify welcome and login #ui using #flutter that runs both Android and iOS devices. 
+[Watch on Youtube](https://www.youtube.com/channel/UCM1OzZsZ5FQIg01vdKGAw7g)
+
+Spotify Redesign.
+
+In this repository contains Redesinged Spotify App using Flutter.
 
 ## Screenshots
 
