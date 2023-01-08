@@ -109,7 +109,7 @@ final List<Map<String, dynamic>> topHit = [
     {
       'image': 'assets/images/music1.png',
       'title': 'stay',
-      'description': 'The Kid LAROI,Justin Bieber',
+      'description': 'The Kid LAROI, Justin Bieber',
       'favorite': true,
     },
     {
@@ -125,9 +125,15 @@ final List<Map<String, dynamic>> topHit = [
       'favorite': true,
     },
     {
-      'image': 'assets/images/jack.png',
+      'image': 'assets/images/Frame1.png',
       'title': 'Unstable',
-      'description': 'Justin Bieber,The Kid LAROI',
+      'description': 'Justin Bieber, The Kid LAROI',
+      'favorite': false,
+    },
+    {
+      'image': 'assets/images/Group25.png',
+      'title': 'Unstable',
+      'description': 'Justin Bieber, The Kid LAROI',
       'favorite': false,
     },
   ];
