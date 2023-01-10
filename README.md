@@ -4,7 +4,7 @@
 
 Spotify Ui Design
 
-In this repository contains Redesinged Spotify App using Flutter.
+ In this repository contains Redesign Spotify App using Flutter.
 
 ## Screenshots
 
