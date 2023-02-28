@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:spotify/constants/colors.dart';
 import 'package:spotify/view/tab/tap.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool rememberMe = false;
 
   @override
   Widget build(BuildContext context) {
@@ -69,8 +76,13 @@ class LoginPage extends StatelessWidget {
                               child: Input(hint: 'Password', icon: Icons.visibility_outlined),
                             ),
                             SwitchListTile.adaptive(
-                              value: true,
-                              onChanged: ((value) {}),
+                              activeColor: ColorConstants.primaryColor,
+                              value: rememberMe,
+                              onChanged: ((bool value) {
+                                setState(() {
+                                  rememberMe = value;
+                                });
+                              }),
                               contentPadding: const EdgeInsets.all(0),
                               title: Text('Remember me', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ColorConstants.starterWhite)),
                             ),
