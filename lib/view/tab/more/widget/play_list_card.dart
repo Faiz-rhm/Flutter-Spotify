@@ -37,7 +37,7 @@ class PlayListCard extends StatelessWidget {
                   PlayListImage(image: play['image_4']),
                 ],
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 4,),
               Text(play['title'], style: TextStyle(
                 color: ColorConstants.starterWhite,
                 fontSize: 14,

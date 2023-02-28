@@ -29,7 +29,7 @@ class TopMusic extends StatelessWidget {
               ),
               padding: const EdgeInsets.only(right: 15, left: 15, top: 15, bottom: 0),
               margin: const EdgeInsets.all(4),
-              width: 155,
+              width: 160,
               height: 195,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,7 +75,7 @@ class TopMusic extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   )),
-                  const SizedBox(height: 8,),
+                  const SizedBox(height: 2,),
                   Text(topMix['description'], style: TextStyle(
                     color: ColorConstants.starterWhite,
                     fontSize: 11,
