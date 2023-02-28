@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Spotify',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.green,
       ),
       home: const GetStartedPage(),
